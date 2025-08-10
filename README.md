@@ -1,73 +1,67 @@
-DeepResearch AI – Autonomous AI Research Agent
+DeepResearch AI
 
-A production-grade AI platform that can autonomously research any topic end-to-end — from searching and extracting information to summarizing, analyzing, and generating comprehensive reports with citations. Built using Python, LangChain, OpenAI API, Elasticsearch, FastAPI, and React, it demonstrates multi-agent orchestration and advanced NLP capabilities.
+A production-grade AI research platform that autonomously gathers, analyzes, and summarizes information from multiple sources. Built using FastAPI for backend APIs, Python-based multi-agent architecture for autonomous crawling and summarization, and Elasticsearch for data storage.
 
 How It Works
 
-This system automates the entire research process. The web crawler and API integrations collect relevant data from multiple sources. The NLP engine processes and extracts key facts, while a reliability scoring mechanism filters out low-quality or biased content. A writing agent then compiles the findings into a well-structured PDF or HTML report with proper citations.
+This system allows users to enter a research topic.
+The backend coordinates multiple AI agents:
 
+Web crawler agent – fetches relevant pages while respecting robots.txt guidelines.
 
-The application follows a modular architecture:-
+Summarizer agent – uses NLP models to condense long documents.
 
+Data analyst agent – organizes findings into structured formats for reports.
 
--Search Agent gathers information via web crawling and APIs.
--Analysis Agent performs NLP-based summarization and fact extraction.
--Scoring Agent evaluates the credibility of sources.
--Writer Agent generates final structured reports.
--Frontend provides an interactive interface for initiating research and viewing results.
-
+The processed data is stored in Elasticsearch and made available through REST APIs.
+The frontend (optional) can display results in a clean dashboard or export them as downloadable reports.
 
 Features
 
--Autonomous topic research with minimal human input.
--Multi-source data gathering (web + APIs).
--NLP-based summarization and fact extraction.
--Source reliability scoring for content credibility.
--Auto-generated PDF/HTML research reports with citations.
--FastAPI backend with LangChain-based agent orchestration.
--Full-text search powered by Elasticsearch.
--Responsive React-based frontend.
+Autonomous multi-agent system for research automation.
 
+FastAPI backend for API orchestration and service integration.
 
+Elasticsearch storage for high-speed search and retrieval.
+
+AI-powered summarization for quick insights.
+
+Topic-based structured reporting.
+
+Dockerized deployment for portability.
+
+Security
+
+API key-based authentication for backend endpoints.
+
+Restricted crawler behavior to comply with robots.txt guidelines.
+
+Sanitized data pipelines to prevent injection attacks.
 
 Installation Steps
 
 Clone the repository:
--git clone https://github.com/Charanlokesh22/deepresearch-ai.git
+git clone https://github.com/YourUsername/deepresearch-ai.git
 cd deepresearch-ai
 
-Start all services using Docker Compose:
--docker-compose up --build
+Start the application using Docker:
+docker-compose up --build
 
-Access Points
-
--Frontend: http://localhost:3000
--Backend API: http://localhost:8000/api
--Elasticsearch: http://localhost:9200
-
-
+Access the API at:
+http://localhost:8000
 
 Usage
 
--Enter a topic in the frontend interface.
--The Search Agent retrieves relevant articles, papers, and data.
--The Analysis Agent processes and summarizes the findings.
--The Writer Agent compiles a professional report.
--Download or view the report in PDF or HTML format.
+Authenticate using your API key.
 
-Security
+Send a POST request to /research with your topic.
 
--API key-based authentication for backend endpoints.
--Restricted crawler behavior to comply with robots.txt guidelines.
--Sanitized data pipelines to prevent injection attacks.
+Retrieve structured research summaries and downloadable reports.
 
+AI Agents
 
-AI Components
+Crawler Agent – Gathers topic-relevant documents.
 
-The AI pipeline uses multiple agents in LangChain:
+Summarizer Agent – Condenses long texts using NLP.
 
--Search Agent: Crawls the web and calls APIs.
--Analysis Agent: Uses NLP to extract facts and summarize.
--Scoring Agent: Assigns credibility scores to sources.
--Writer Agent: Generates final reports with proper formatting.
-
+Analyst Agent – Structures and organizes findings for final output.
