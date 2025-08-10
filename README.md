@@ -68,3 +68,5 @@ Search Agent uses APIs and crawlers for data gathering.
 Analysis Agent uses NLP for summarization and fact extraction.
 Writing Agent formats findings into structured, citation-backed reports.
 Indexing Agent stores data for instant retrieval.
+
+
