@@ -7,11 +7,9 @@ How It Works
 This system allows users to enter a research topic.
 The backend coordinates multiple AI agents:
 
-Web crawler agent – fetches relevant pages while respecting robots.txt guidelines.
-
-Summarizer agent – uses NLP models to condense long documents.
-
-Data analyst agent – organizes findings into structured formats for reports.
+1)Web crawler agent – fetches relevant pages while respecting robots.txt guidelines.
+2)Summarizer agent – uses NLP models to condense long documents.
+3)Data analyst agent – organizes findings into structured formats for reports.
 
 The processed data is stored in Elasticsearch and made available through REST APIs.
 The frontend (optional) can display results in a clean dashboard or export them as downloadable reports.
@@ -41,12 +39,16 @@ Sanitized data pipelines to prevent injection attacks.
 Installation Steps
 
 Clone the repository:
-git clone https://github.com/YourUsername/deepresearch-ai.git
-cd deepresearch-ai
 
+bash
+Copy code
+git clone https://github.com/YourUsername/deepresearch-ai.git  
+cd deepresearch-ai  
 Start the application using Docker:
-docker-compose up --build
 
+bash
+Copy code
+docker-compose up --build  
 Access the API at:
 http://localhost:8000
 
@@ -65,3 +67,4 @@ Crawler Agent – Gathers topic-relevant documents.
 Summarizer Agent – Condenses long texts using NLP.
 
 Analyst Agent – Structures and organizes findings for final output.
+
