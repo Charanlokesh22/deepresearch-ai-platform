@@ -32,7 +32,7 @@ REST API for triggering and monitoring research tasks.
 Installation Steps
 
 Clone the repository:
-git clone https://github.com/your-username/deepresearch-ai-platform.git
+git clone https://github.com/Charanlokesh22/deepresearch-ai-platform.git
 cd deepresearch-ai-platform
 
 Set up environment variables in a .env file:
