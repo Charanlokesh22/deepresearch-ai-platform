@@ -1,0 +1,25 @@
+deepresearch-ai/
+├─ backend/
+│  ├─ app/
+│  │  ├─ main.py
+│  │  ├─ api.py
+│  │  ├─ tasks.py
+│  │  ├─ crawler.py
+│  │  ├─ pipeline.py
+│  │  ├─ es_client.py
+│  │  ├─ models.py
+│  │  ├─ report_generator.py
+│  │  └─ config.py
+│  ├─ requirements.txt
+│  └─ alembic/ (optional migrations)
+│
+├─ frontend/
+│  ├─ package.json
+│  ├─ src/
+│  │  ├─ App.js
+│  │  ├─ api.js
+│  │  └─ components/ResearchForm.js
+│  └─ public/
+│
+├─ README.md
+└─ .env.example
