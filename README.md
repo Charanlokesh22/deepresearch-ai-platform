@@ -1,69 +1,73 @@
-DeepResearch AI Platform
+DeepResearch AI – Autonomous AI Research Agent
 
-Description
-An autonomous AI platform that performs end-to-end research. It searches multiple sources, extracts key information, summarizes findings, evaluates source reliability, and generates professional research reports with citations. Suitable for academic, legal, and business use cases.
+A production-grade AI platform that can autonomously research any topic end-to-end — from searching and extracting information to summarizing, analyzing, and generating comprehensive reports with citations. Built using Python, LangChain, OpenAI API, Elasticsearch, FastAPI, and React, it demonstrates multi-agent orchestration and advanced NLP capabilities.
 
-Key Features
+How It Works
 
-Multi-agent system for search, analysis, and report generation
+This system automates the entire research process. The web crawler and API integrations collect relevant data from multiple sources. The NLP engine processes and extracts key facts, while a reliability scoring mechanism filters out low-quality or biased content. A writing agent then compiles the findings into a well-structured PDF or HTML report with proper citations.
 
-Web crawling and API-based data collection
 
-NLP-powered summarization and fact extraction
+The application follows a modular architecture:-
 
-Source credibility scoring
 
-PDF and HTML report generation
+-Search Agent gathers information via web crawling and APIs.
+-Analysis Agent performs NLP-based summarization and fact extraction.
+-Scoring Agent evaluates the credibility of sources.
+-Writer Agent generates final structured reports.
+-Frontend provides an interactive interface for initiating research and viewing results.
 
-Scalable and modular architecture
 
-Technology Stack
+Features
 
-Backend: Python, FastAPI
+-Autonomous topic research with minimal human input.
+-Multi-source data gathering (web + APIs).
+-NLP-based summarization and fact extraction.
+-Source reliability scoring for content credibility.
+-Auto-generated PDF/HTML research reports with citations.
+-FastAPI backend with LangChain-based agent orchestration.
+-Full-text search powered by Elasticsearch.
+-Responsive React-based frontend.
 
-AI/NLP: LangChain, OpenAI API, spaCy
 
-Storage: Elasticsearch, PostgreSQL
 
-Frontend: React
+Installation Steps
 
-Orchestration: Celery
+Clone the repository:
+-git clone https://github.com/Charanlokesh22/deepresearch-ai.git
+cd deepresearch-ai
 
-Deployment: Docker
+Start all services using Docker Compose:
+-docker-compose up --build
 
-Installation
+Access Points
 
-Clone repository
-git clone https://github.com/yourusername/deepresearch-ai-platform.git
-cd deepresearch-ai-platform
+-Frontend: http://localhost:3000
+-Backend API: http://localhost:8000/api
+-Elasticsearch: http://localhost:9200
 
-Create virtual environment and activate
-python -m venv venv
-source venv/bin/activate (Linux/Mac)
-venv\Scripts\activate (Windows)
 
-Install dependencies
-pip install -r requirements.txt
-
-Configure environment variables in .env
-OPENAI_API_KEY
-ELASTICSEARCH_URL
-DATABASE_URL
-
-Start backend
-uvicorn app.main:app --reload
-
-Start frontend
-cd frontend
-npm install
-npm start
 
 Usage
 
-Enter a topic in the frontend interface
+-Enter a topic in the frontend interface.
+-The Search Agent retrieves relevant articles, papers, and data.
+-The Analysis Agent processes and summarizes the findings.
+-The Writer Agent compiles a professional report.
+-Download or view the report in PDF or HTML format.
 
-System runs search, analysis, and report generation
+Security
 
-Download final report in PDF or HTML
+-API key-based authentication for backend endpoints.
+-Restricted crawler behavior to comply with robots.txt guidelines.
+-Sanitized data pipelines to prevent injection attacks.
 
-Project Structure
+
+AI Components
+
+The AI pipeline uses multiple agents in LangChain:
+
+-Search Agent: Crawls the web and calls APIs.
+-Analysis Agent: Uses NLP to extract facts and summarize.
+-Scoring Agent: Assigns credibility scores to sources.
+-Writer Agent: Generates final reports with proper formatting.
+
